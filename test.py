@@ -37,7 +37,7 @@ async def on_message(message):
         await message.channel.send(embed=embed)
     
     if message.content.startswith('!!유튜브'):
-        embed=discord.Embed(title='공식사이트는아닌뎅 걍 만들어본겅', description = "헿", color = 0xff0000, url = "https://www.youtube.com/channel/UCrIyUWGoXBUMC6OoxhbPhnw")
+        embed=discord.Embed(title='클랜유튜브', description = "", color = 0xff0000, url = "https://www.youtube.com/channel/UCrIyUWGoXBUMC6OoxhbPhnw")
         await message.channel.send(embed=embed)
     
 
