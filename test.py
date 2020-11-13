@@ -4,6 +4,7 @@ import os
 
 client = discord.Client()
 game = discord.Game("상태메세지")
+tocjen = 'Nzc2NzkwNDY2NjkwOTQwOTI4.X66Afw.w4DVlXnhY4WoZufy_-z8q-xTm3k'
 
 
 @client.event
@@ -42,4 +43,4 @@ async def on_message(message):
 
        
 
-client.run("Nzc2NzkwNDY2NjkwOTQwOTI4.X66Afw.w4DVlXnhY4WoZufy_-z8q-xTm3k")
+client.run('tocken')
