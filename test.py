@@ -35,7 +35,11 @@ async def on_message(message):
     if message.content.startswith('!!사이트'):
         embed=discord.Embed(title='공식사이트는아닌뎅 걍 만들어본겅', description = "헿", color = 0xff0000, url = "https://nlgclan.netlify.app/")
         await message.channel.send(embed=embed)
-
+    
+    if message.content.startswith('!!유튜브'):
+        embed=discord.Embed(title='공식사이트는아닌뎅 걍 만들어본겅', description = "헿", color = 0xff0000, url = "https://www.youtube.com/channel/UCrIyUWGoXBUMC6OoxhbPhnw")
+        await message.channel.send(embed=embed)
+    
 
     if message.content.startswith('!!클프사'):
         await message.channel.send(file=discord.File('클프사.jpg'))
