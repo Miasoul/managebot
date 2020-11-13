@@ -5,6 +5,7 @@ import os
 client = discord.Client()
 game = discord.Game("상태메세지")
 
+
 @client.event
 async def on_ready():
     print('Bot Online')
@@ -41,4 +42,4 @@ async def on_message(message):
 
        
 
-client.run("Nzc2NzkwNDY2NjkwOTQwOTI4.X66Afw.j2d6x80-x0aKuUiOMCZZMuvj1D4")
+client.run("Nzc2NzkwNDY2NjkwOTQwOTI4.X66Afw.w4DVlXnhY4WoZufy_-z8q-xTm3k")
