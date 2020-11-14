@@ -47,7 +47,7 @@ async def on_message(message):
         embed.add_field(name="!!사이트", value="NLG클랜 사이트로갑니다", inline=True)
         embed.add_field(name="!!유튜브", value="NLG클랜 채널로 갑니다", inline=True)
         embed.add_field(name="!!설명", value="NLG클랜에대한 설명을 해줍니다", inline=True)
-
+        await message.channel.send(embed=embed)
        
 access_token = os.environ['BOT_TOKEN']
 client.run(access_token)
