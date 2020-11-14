@@ -26,6 +26,7 @@ async def on_message(message):
         embed.add_field(name="매니져", value="『NLG』_14inkid☆", inline=True)
         embed.add_field(name="매니져", value="『NLG』_14MiaSoul☆", inline=True)
         embed.add_field(name="매니져", value="『NLG』_14Nethron☆ 부계정 (스크림 불가)", inline=True)
+        embed.add_field(name="매니져", value="『NLG』_13Munchip☆", inline=True)
         embed.add_field(name="기본사항", value="저희 NLG 클랜은 카카오배틀그라운드 클랜입니다", inline=True)
         await message.channel.send(embed=embed)
     
