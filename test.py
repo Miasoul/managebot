@@ -6,6 +6,14 @@ client = discord.Client()
 game = discord.Game("상태메세지")
 
 
+@bot.event 
+async def on_ready(): 
+    await bot.change_presence(activity=discord.Game(name="NLG클랜에서 일중!!"))
+
+
+
+
+
 
 @client.event
 async def on_ready():
