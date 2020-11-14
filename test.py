@@ -1,3 +1,4 @@
+
 import discord
 import asyncio
 import os
@@ -48,14 +49,7 @@ async def on_message(message):
         embed.add_field(name="!!유튜브", value="NLG클랜 채널로 갑니다", inline=True)
         embed.add_field(name="!!설명", value="NLG클랜에대한 설명을 해줍니다", inline=True)
         await message.channel.send(embed=embed)
-        
-     if message.content.startswith('!!도움'):
-        embed=discord.Embed(title='명령어 목록', description = "", color = 0xff0000)
-        embed.add_field(name="!!클프사", value="클랜프로필을 업로드합니다", inline=True)
-        embed.add_field(name="!!사이트", value="NLG클랜 사이트로갑니다", inline=True)
-        embed.add_field(name="!!유튜브", value="NLG클랜 채널로 갑니다", inline=True)
-        embed.add_field(name="!!설명", value="NLG클랜에대한 설명을 해줍니다", inline=True)
-        await message.channel.send(embed=embed)
+
        
     if message.content.startswith('!!help'):
         embed=discord.Embed(title='명령어 목록', description = "", color = 0xff0000)
@@ -65,14 +59,7 @@ async def on_message(message):
         embed.add_field(name="!!설명", value="NLG클랜에대한 설명을 해줍니다", inline=True)
         await message.channel.send(embed=embed)
 
-     if message.content.startswith('!!ㅗ디ㅔ'):
-        embed=discord.Embed(title='명령어 목록', description = "", color = 0xff0000)
-        embed.add_field(name="!!클프사", value="클랜프로필을 업로드합니다", inline=True)
-        embed.add_field(name="!!사이트", value="NLG클랜 사이트로갑니다", inline=True)
-        embed.add_field(name="!!유튜브", value="NLG클랜 채널로 갑니다", inline=True)
-        embed.add_field(name="!!설명", value="NLG클랜에대한 설명을 해줍니다", inline=True)
-        await message.channel.send(embed=embed)
-        
+  
         
 access_token = os.environ['BOT_TOKEN']
 client.run(access_token)
