@@ -66,7 +66,7 @@ async def on_message(message):
         await message.channel.send("ㅇㅈ")
     
     
-    if message.content.startswith('횬준이바보'):
+    if message.content.startswith('횬준이형바보'):
         await message.channel.send("ㅇㅈ")
         
     if message.content.startswith('!!스크림'):
