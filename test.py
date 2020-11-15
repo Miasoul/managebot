@@ -72,6 +72,10 @@ async def on_message(message):
     if message.content.startswith('!!스크림'):
         await message.channel.send("https://discord.gg/wFVspUQKYJ")
         
+        
+    if message.content.startswith('!!횬준이의만행'):
+        await message.channel.send(file=discord.File('unknown.png'))
+        
 
   
         
