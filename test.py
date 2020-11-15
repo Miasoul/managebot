@@ -60,7 +60,7 @@ async def on_message(message):
         embed.add_field(name="!!설명", value="NLG클랜에대한 설명을 해줍니다", inline=True)
         await message.channel.send(embed=embed)
         
-    if message.content('횬준이바보'):
+    if message.content.startswith('횬준이바보'):
         await message.channel.send("ㅇㅈ")
 
   
