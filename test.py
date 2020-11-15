@@ -64,6 +64,10 @@ async def on_message(message):
         
     if message.content.startswith('횬준이바보'):
         await message.channel.send("ㅇㅈ")
+    
+    
+    if message.content.startswith('횬준이바보'):
+        await message.channel.send("ㅇㅈ")
         
     if message.content.startswith('!!스크림'):
         await message.channel.send("https://discord.gg/wFVspUQKYJ")
