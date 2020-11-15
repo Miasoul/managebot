@@ -23,10 +23,10 @@ async def on_message(message):
         embed = discord.Embed(title="클랜설명", description="클랜마스터:『NLG』_21Bear★", color=0x62c1cc) #Embed의 기본 틀(색상, 메인 제목, 설명)을 잡아줍니다   하단에 들어가는 조그마한 설명을 잡아줍니다   embed를 포함 한 채로 메시지를 전송합니다.
         embed.set_footer(text="궁금증이 해결되셨나요?? 안되셨으면 클마한테 문의 ㄱ")
         embed.add_field(name="부마스터", value="『NLG』_17Rudndiej☆키랏☆", inline=True)
-        embed.add_field(name="매니져", value="『NLG』_14inkid☆", inline=True)
-        embed.add_field(name="매니져", value="『NLG』_14MiaSoul☆", inline=True)
-        embed.add_field(name="매니져", value="『NLG』_14Nethron☆ 부계정 (스크림 불가)", inline=True)
-        embed.add_field(name="매니져", value="『NLG』_13Munchip☆", inline=True)
+        embed.add_field(name="매니저", value="『NLG』_14inkid☆", inline=True)
+        embed.add_field(name="매니저", value="『NLG』_14MiaSoul☆", inline=True)
+        embed.add_field(name="매니저", value="『NLG』_14Nethron☆ 부계정 (스크림 불가)", inline=True)
+        embed.add_field(name="매니저", value="『NLG』_13Munchip☆", inline=True)
         embed.add_field(name="기본사항", value="저희 NLG 클랜은 카카오배틀그라운드 클랜입니다 NLG클랜은 인성을 중요시하는 클랜입니다 모든조건에 적합하다고해도 인성이 안되면 불합격이 됩니다.", inline=True)
         await message.channel.send(embed=embed)
     
