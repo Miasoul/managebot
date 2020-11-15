@@ -49,6 +49,7 @@ async def on_message(message):
         embed.add_field(name="!!사이트", value="NLG클랜 사이트로갑니다", inline=True)
         embed.add_field(name="!!유튜브", value="NLG클랜 채널로 갑니다", inline=True)
         embed.add_field(name="!!설명", value="NLG클랜에대한 설명을 해줍니다", inline=True)
+        embed.add_field(name="!!스크림", value="NLG스크림서버 초대링크를 보내", inline=True)
         await message.channel.send(embed=embed)
 
        
@@ -62,6 +63,10 @@ async def on_message(message):
         
     if message.content.startswith('횬준이바보'):
         await message.channel.send("ㅇㅈ")
+        
+    if message.content.startswith('!!스크림'):
+        await message.channel.send("https://discord.gg/wFVspUQKYJ")
+        
 
   
         
