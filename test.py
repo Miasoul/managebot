@@ -86,6 +86,7 @@ async def on_message(message):
             await message.delete()
         else:
             await message.channel.send("이 채널에선 실행이 불가능합니다.")
+            await message.delete()
            
 
   
