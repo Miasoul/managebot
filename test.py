@@ -84,7 +84,7 @@ async def on_message(message):
             embed.add_field(name="비번:", value="nlgisgod!", inline=True)
             await message.channel.send(embed=embed)
         else:
-            await message.channel.send("여기선 실행이 불가능합니다.")
+            await message.channel.send("이  실행이 불가능합니다.")
            
 
   
