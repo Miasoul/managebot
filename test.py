@@ -83,6 +83,7 @@ async def on_message(message):
             embed.add_field(name="아이디:", value="nlg102938@gmail.com", inline=True)
             embed.add_field(name="비번:", value="nlgisgod!", inline=True)
             await message.channel.send(embed=embed)
+            await message.delete()
         else:
             await message.channel.send("이 채널에선 실행이 불가능합니다.")
            
