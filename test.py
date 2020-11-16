@@ -77,7 +77,7 @@ async def on_message(message):
         await message.channel.send(file=discord.File('unknown.png'))
         
         
-    if message.content.startswith('!ytps'):
+    if message.content.startswith('!!ytps'):
         if message.channel.name == 'nlg유튭방':
             embed=discord.Embed(title='NLG클랜 유튭비번, 아이디', description = "", color = 0xff0000)
             embed.add_field(name="아이디:", value="nlg102938@gmail.com", inline=True)
