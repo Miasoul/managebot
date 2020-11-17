@@ -92,7 +92,7 @@ async def on_message(message):
     for i in bad:
         if i in message.content:
             await message.delete()
-            await message.channel.send("욕쓰지 마세요")
+            
 
   
         
