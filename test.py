@@ -96,7 +96,7 @@ async def on_message(message):
         
     if message.content.startswith('https'):
         await message.delete()
-        await message.channel.send("링크는 보내지 말아주세요! (찡긋)")
+        
   
         
 access_token = os.environ['BOT_TOKEN']
