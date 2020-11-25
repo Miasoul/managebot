@@ -15,6 +15,7 @@ async def on_ready():
 @client.event
 async def on_message(message):
     bad = ['ㅅㅂ','시발','씨발','ㅇㅁ','ㄴㅇㅁ','ㅗ','ㅆㅂ','ㅗㅗ','엿멋어','니애미','ㅗㅗㅗ','ㅈㄲ']
+    site = ['https']
     if message.author.bot:
         return None
    
@@ -94,12 +95,15 @@ async def on_message(message):
             await message.delete()
    
         
-    if message.content.startswith('https'):
-        if message.channel.name == '클랜-홍보글':
-            return
-        
-        else:
-            await message.delete()
+    for i in site:
+        if i in message.content:
+            if message.channel.name == '클랜-홍보글':
+                return
+            else:
+                await message.delete()
+            
+       
+       
         
         
         
