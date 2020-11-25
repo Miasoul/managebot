@@ -15,7 +15,7 @@ async def on_ready():
 @client.event
 async def on_message(message):
     bad = ['ㅅㅂ','시발','씨발','ㅇㅁ','ㄴㅇㅁ','ㅗ','ㅆㅂ','ㅗㅗ','엿멋어','니애미','ㅗㅗㅗ','ㅈㄲ']
-    site = ['https']
+    site = ['https','http']
     if message.author.bot:
         return None
    
@@ -89,10 +89,7 @@ async def on_message(message):
         else:
             await message.channel.send("이 채널에선 실행이 불가능합니다.")
             await message.delete()
-           
-    for i in bad:
-        if i in message.content:
-            await message.delete()
+
    
         
     for i in site:
