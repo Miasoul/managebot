@@ -95,7 +95,16 @@ async def on_message(message):
    
         
     if message.content.startswith('https'):
-        await message.delete()
+        if message.channel.name == '클랜-홍보글':
+            return
+        
+        else:
+            await message.delete()
+        
+        
+        
+        
+        
         
   
         
