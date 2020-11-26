@@ -94,7 +94,7 @@ async def on_message(message):
         
     for i in site:
         if i in message.content:
-            if message.channel.name == '클랜-홍보글':
+            if message.author.guild_permissions.manage_channels:
                 return
             else:
                 await message.delete()
