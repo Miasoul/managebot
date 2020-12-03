@@ -68,7 +68,7 @@ async def on_message(message):
     if message.content.startswith('횬준이바보'):
         await message.channel.send("ㅇㅈ")
     
-    if message.content.startswith('!내정보'):
+    if message.content.startswith('!!내정보'):
         date = datetime.datetime.utcfromtimestamp(((int(message.author.id) >> 22) + 1420070400000) / 1000)
         embed = discord.Embed(color=0x00ff0)
         embed.add_field(name="이름", value=message.author.name, inline=True)
