@@ -23,7 +23,7 @@ async def on_message(message):
 
     if message.content.startswith('!!설명'):
         
-        embed = discord.Embed(title="클랜설명", description="클랜마스터:『NLG』_21Bear★", color=0x62c1cc) #Embed의 기본 틀(색상, 메인 제목, 설명)을 잡아줍니다   하단에 들어가는 조그마한 설명을 잡아줍니다   embed를 포함 한 채로 메시지를 전송합니다.
+        embed = discord.Embed(title="클랜설명", description="클랜마스터:『NLG』_21Bear★", color=0x62c1cc,timestamp=datetime.datetime.utcnow()) #Embed의 기본 틀(색상, 메인 제목, 설명)을 잡아줍니다   하단에 들어가는 조그마한 설명을 잡아줍니다   embed를 포함 한 채로 메시지를 전송합니다.
         embed.set_footer(text="궁금증이 해결되셨나요?? 안되셨으면 클마한테 문의 ㄱ")
         embed.add_field(name="부마스터", value="NLG_🆔SexyLuan_-", inline=True)
         embed.add_field(name="매니저", value="NLG_14inkid", inline=True)
@@ -35,11 +35,11 @@ async def on_message(message):
     
     
     if message.content.startswith('!!사이트'):
-        embed=discord.Embed(title='공식사이트는아닌뎅 걍 만들어본겅', description = "헿", color = 0xff0000, url = "https://nlgclan.netlify.app/")
+        embed=discord.Embed(title='공식사이트는아닌뎅 걍 만들어본겅', description = "헿", color = 0xff0000, url = "https://nlgclan.netlify.app/", timestamp=datetime.datetime.utcnow())
         await message.channel.send(embed=embed)
     
     if message.content.startswith('!!유튜브'):
-        embed=discord.Embed(title='클랜유튜브', description = "", color = 0xff0000, url = "https://www.youtube.com/channel/UCrIyUWGoXBUMC6OoxhbPhnw")
+        embed=discord.Embed(title='클랜유튜브', description = "", color = 0xff0000, url = "https://www.youtube.com/channel/UCrIyUWGoXBUMC6OoxhbPhnw", timestamp=datetime.datetime.utcnow())
         await message.channel.send(embed=embed)
     
 
@@ -47,7 +47,7 @@ async def on_message(message):
         await message.channel.send(file=discord.File('클프사.jpg'))
         
     if message.content.startswith('!!명령어'):
-        embed=discord.Embed(title='명령어 목록', description = "", color = 0xff0000)
+        embed=discord.Embed(title='명령어 목록', description = "", color = 0xff0000, timestamp=datetime.datetime.utcnow())
         embed.add_field(name="!!클프사", value="클랜프로필을 업로드합니다", inline=True)
         embed.add_field(name="!!사이트", value="NLG클랜 사이트로갑니다", inline=True)
         embed.add_field(name="!!유튜브", value="NLG클랜 채널로 갑니다", inline=True)
@@ -58,7 +58,7 @@ async def on_message(message):
 
        
     if message.content.startswith('!!help'):
-        embed=discord.Embed(title='명령어 목록', description = "", color = 0xff0000)
+        embed=discord.Embed(title='명령어 목록', description = "", color = 0xff0000, timestamp=datetime.datetime.utcnow())
         embed.add_field(name="!!클프사", value="클랜프로필을 업로드합니다", inline=True)
         embed.add_field(name="!!사이트", value="NLG클랜 사이트로갑니다", inline=True)
         embed.add_field(name="!!유튜브", value="NLG클랜 채널로 갑니다", inline=True)
@@ -72,7 +72,7 @@ async def on_message(message):
     
     if message.content.startswith('!!내정보'):
         date = datetime.datetime.utcfromtimestamp(((int(message.author.id) >> 22) + 1420070400000) / 1000)
-        embed = discord.Embed(color=0x00ff0)
+        embed = discord.Embed(color=0x00ff0, timestamp=datetime.datetime.utcnow())
         embed.add_field(name="이름", value=message.author.name, inline=True)
         embed.add_field(name="서버닉네임", value=message.author.display_name, inline=True)
         embed.add_field(name="가입일", value=str(date.year) + "년" + str(date.month) + "월" + str(date.day) + "일", inline=True)
@@ -97,7 +97,7 @@ async def on_message(message):
         
     if message.content.startswith('!!ytps'):
         if message.channel.name == 'nlg유튭방':
-            embed=discord.Embed(title='NLG클랜 유튭비번, 아이디', description = "", color = 0xff0000)
+            embed=discord.Embed(title='NLG클랜 유튭비번, 아이디', description = message.author.name + "님이 명령어를쓰심", color = 0xff0000, timestamp=datetime.datetime.utcnow())
             embed.add_field(name="아이디:", value="nlg102938@gmail.com", inline=True)
             embed.add_field(name="비번:", value="nlgisgod!", inline=True)
             await message.channel.send(embed=embed)
