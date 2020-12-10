@@ -114,10 +114,19 @@ async def on_message(message):
                 return
             else:
                 await message.delete()
-            
+     
        
        
-        
+    role = discord.utils.get(message.guild.roles, name = "NLG클랜원")
+
+    for i in site:
+        if i in message.content:
+            if message.author.guild_permissions.manage_channels:
+                return
+            elif role in message.author.roles:
+                return
+            else:
+                await message.delete()    
         
         
         
