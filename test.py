@@ -30,7 +30,6 @@ async def on_message(message):
         embed.add_field(name="매니저", value="NLG_14inkid#1821", inline=True)
         embed.add_field(name="매니저", value="NLG_14MiaSoul#0811", inline=True)
         embed.add_field(name="매니저", value="『NLG』_14Nethron☆ (할 짓 없음)#9809", inline=True)
-        embed.add_field(name="매니저", value="NLG_13Munchip", inline=True)
         embed.add_field(name="기본사항", value="저희 NLG 클랜은 카카오배틀그라운드 클랜입니다 NLG클랜은 인성을 중요시하는 클랜입니다 모든조건에 적합하다고해도 인성이 안되면 불합격이 됩니다.", inline=True)
         await message.channel.send(embed=embed)
     
