@@ -17,7 +17,7 @@ async def on_ready():
 async def on_message(message):
     bad = ['ㅅㅂ','시발','씨발','ㅇㅁ','ㄴㅇㅁ','ㅗ','ㅆㅂ','ㅗㅗ','엿멋어','니애미','ㅗㅗㅗ','ㅈㄲ']
     site = ['https','http']
-    role = discord.utils.get(message.guild.roles, name = "NLG클랜원")
+    role = discord.utils.get(message.guild.roles, name = "링크")
     if message.author.bot:
         return None
    
