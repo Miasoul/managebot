@@ -92,7 +92,10 @@ async def on_message(message):
         
         
     if message.content.startswith('!!횬준이의만행'):
-        await message.channel.send(file=discord.File('unknown.png'))
+        if message.channel.name == '💬클랜채팅방💬':
+            await message.channel.send(file=discord.File('unknown.png'))
+        else:
+            return
         
         
     if message.content.startswith('!!ytps'):
