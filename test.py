@@ -117,12 +117,12 @@ async def on_message(message):
 
     for i in site:
         if i in message.content:
-        if message.author.guild_permissions.manage_channels:
-            return
-        elif role in message.author.roles:
-            return
-        else:
-            await message.delete()           
+            if message.author.guild_permissions.manage_channels:
+                return
+            elif role in message.author.roles:
+                return
+            else:
+                await message.delete()           
 @client.command()
 async def ban(ctx, member : discord.Member, *, reason):
     channel = '792385454854635520'
