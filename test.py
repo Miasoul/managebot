@@ -115,7 +115,14 @@ async def on_message(message):
             await message.channel.send("이 채널에선 실행이 불가능합니다.")
             await message.delete()
 
-            
+    for i in site:
+        if i in message.content:
+        if message.author.guild_permissions.manage_channels:
+            return
+        elif role in message.author.roles:
+            return
+        else:
+            await message.delete()           
 @client.command()
 async def ban(ctx, member : discord.Member, *, reason):
     channel = '792385454854635520'
@@ -136,14 +143,7 @@ async def ban(ctx, member : discord.Member, *, reason):
        
     
 
-    for i in site:
-        if i in message.content:
-            if message.author.guild_permissions.manage_channels:
-                return
-            elif role in message.author.roles:
-                return
-            else:
-                await message.delete()    
+    
         
         
         
