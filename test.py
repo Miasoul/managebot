@@ -125,7 +125,7 @@ async def on_message(message):
                 await message.delete()           
 @client.command()
 async def ban(ctx, member : discord.Member, *, reason):
-    channel = '792385454854635520'
+    channel = '792386614164455433'
     embed = discord.Embed(title="처리결과", description="", color=0x62c1cc)
     embed.add_field(name="이름",value=member.name)
     embed.add_field(name="사유",value=reason)
