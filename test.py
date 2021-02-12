@@ -44,8 +44,8 @@ async def on_message(message):
  
     
 
-    if message.content.startswith('!!클프사'):
-        await message.channel.send(file=discord.File('클프사.jpg'))
+    if message.content.startswith('!!프사'):
+        await message.channel.send(file=discord.File('클프사.'))
         
     if message.content.startswith('!!명령어'):
         embed=discord.Embed(title='명령어 목록', description = "", color = 0xff0000, timestamp=datetime.datetime.utcnow())
