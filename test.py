@@ -58,7 +58,7 @@ async def on_message(message):
     if message.content.startswith('!!help'):
         embed=discord.Embed(title='명령어 목록', description = "", color = 0xff0000, timestamp=datetime.datetime.utcnow())
         embed.add_field(name="!!프사", value="프로필을 업로드합니다", inline=True)
-        embed.add_field(name="!!사이트", value="사이트를 보여줌니다", inline=True)
+        embed.add_field(name="!!사이트", value="사이트를 보여줍니다", inline=True)
         embed.add_field(name="!!내정보", value=message.author.name + "님의 이름, 서버이름, 디스코드가입일, 아이디를 보여줍니다", inline=True)
         await message.channel.send(embed=embed)
 
@@ -83,8 +83,7 @@ async def on_message(message):
     if message.content.startswith('횬준이형바보'):
         await message.channel.send("ㅇㅈ")
         
-    if message.content.startswith('!!스크림'):
-        await message.channel.send("https://discord.gg/wFVspUQKYJ")
+
         
         
     if message.content.startswith('!!횬준이의만행'):
