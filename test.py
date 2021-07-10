@@ -11,7 +11,23 @@ client = discord.Client()
 client = commands.Bot(command_prefix=".")
 
 
-game = discord.Game("상태메세지")
+@client.event
+async def on_ready():
+    await bt(["저는 현재 ŁᵾȺn 클랜에서 일하고있어요!!!!"])
+    global opal
+    print("봇 정상 작동")
+
+@client.event
+async def bt(games):
+    await client.wait_until_ready()
+
+    while not client.is_closed():
+        for g in games:
+            await client.change_presence(status = discord.Status.online, activity = discord.Game(g))
+            await asyncio.sleep(5)
+
+
+
 
 @client.event
 async def on_ready():
