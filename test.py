@@ -30,11 +30,12 @@ async def on_message(message):
 
     if message.content.startswith('!!설명'):
         
-        embed = discord.Embed(title="클랜설명", description="클마:Fxxk.#6338", color=0x62c1cc,timestamp=datetime.datetime.utcnow()) #Embed의 기본 틀(색상, 메인 제목, 설명)을 잡아줍니다   하단에 들어가는 조그마한 설명을 잡아줍니다   embed를 포함 한 채로 메시지를 전송합니다.
+        embed = discord.Embed(title="클랜설명", description="클마:박기현#3939", color=0x62c1cc,timestamp=datetime.datetime.utcnow()) #Embed의 기본 틀(색상, 메인 제목, 설명)을 잡아줍니다   하단에 들어가는 조그마한 설명을 잡아줍니다   embed를 포함 한 채로 메시지를 전송합니다.
         embed.set_footer(text="궁금증이 해결되셨나요?? 안되셨으면 클마한테 문의 ㄱ")
-        embed.add_field(name="부마", value="ZxxT4L_-#0001", inline=True)
+        embed.add_field(name="부마", value="어진#1288", inline=True)
         embed.add_field(name="매니저", value="Nxxħɍøn-_#9080", inline=True)
-        embed.add_field(name="기본사항", value="저희 ADW  스배 많이합니다", inline=True)
+        embed.add_field(name="매니저", value="Miasoul#0811", inline=True)
+        embed.add_field(name="기본사항", value="카배 클랜", inline=True)
         await message.channel.send(embed=embed)
     
     
@@ -63,8 +64,7 @@ async def on_message(message):
         await message.channel.send(embed=embed)
 
         
-    if message.content.startswith('횬준이바보'):
-        await message.channel.send("ㅇㅈ")
+ 
     
     if message.content.startswith('!!내정보'):
         date = datetime.datetime.utcfromtimestamp(((int(message.author.id) >> 22) + 1420070400000) / 1000)
@@ -80,17 +80,12 @@ async def on_message(message):
     
     
     
-    if message.content.startswith('횬준이형바보'):
-        await message.channel.send("ㅇㅈ")
+  
         
 
         
         
-    if message.content.startswith('!!횬준이의만행'):
-        if message.channel.name == '💬클랜채팅방💬':
-            await message.channel.send(file=discord.File('unknown.png'))
-        else:
-            return
+   
         
         
     if message.content.startswith('!!ytps'):
