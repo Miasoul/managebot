@@ -16,7 +16,7 @@ async def on_ready():
 
 @client.command()
 async def 유튜브보기(ctx):
-    await ctx.send("click button", components
+    await ctx.send("음성채널에 들어간뒤 아래버튼을 클릭하고 ", components
     = [Button(label = "CLICK me")])
     interaction = await client.wait_for("button_click",
     check = lambda i: i.component.label.startswith
