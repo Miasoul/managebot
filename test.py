@@ -15,13 +15,14 @@ async def on_ready():
     
 
 @client.command()
-async def 버튼(ctx):
+async def 유튜브보기(ctx):
     await ctx.send("click button", components
     = [Button(label = "CLICK me")])
     interaction = await client.wait_for("button_click",
     check = lambda i: i.component.label.startswith
     ("CLICK"))
-    await interaction.respond(content = "ㄳㄳ")
+    link = await togec.create_link(ctx.author.voice.channel.id, 'youtube')
+    await ctx.send(f"{link}")
 
 @client.command()
 async def start(ctx):
