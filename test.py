@@ -28,4 +28,5 @@ async def start(ctx):
     link = await togec.create_link(ctx.author.voice.channel.id, 'youtube')
     await ctx.send(f"{link}")
 
-client.run("ODgyNDg4MTUyMjQ4NDM0NzM4.YS8HIw.LJysjXI_dR_kE2xQjzWsSlQ_PCU")
+access_token = os.environ['BOT_TOKEN']
+client.run(access_token)
