@@ -1,4 +1,4 @@
 discord.py
-discord.ext
-discord_components
-discordTogether
+asyncio
+discord-components
+discord-Together
