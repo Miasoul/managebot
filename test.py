@@ -1,147 +1,31 @@
-
 import discord
-import asyncio
-import os
-import datetime
 from discord.ext import commands
-from discord.utils import get
-
-
-client = discord.Client()
+import os
+import random
+from discord.ext.commands.core import check
+from discord_components import *
+from discordTogether import DiscordTogether
 client = commands.Bot(command_prefix=".")
-
-
-@client.event
-async def on_ready():
-    await bt(["저는 현재 ŁᵾȺn 클랜에서 일하고있어요!!!!"])
-    global opal
-    print("봇 정상 작동")
-
-@client.event
-async def bt(games):
-    await client.wait_until_ready()
-
-    while not client.is_closed():
-        for g in games:
-            await client.change_presence(status = discord.Status.online, activity = discord.Game(g))
-            await asyncio.sleep(5)
-
-
-
+togec = DiscordTogether(client)
 
 @client.event
 async def on_ready():
-    print('Bot Online')
-    print(client.user.name)
-    print(client.user.id)
-
-@client.event
-async def on_message(message):
-    bad = ['ㅅㅂ','시발','씨발','ㅇㅁ','ㄴㅇㅁ','ㅗ','ㅆㅂ','ㅗㅗ','엿멋어','니애미','ㅗㅗㅗ','ㅈㄲ']
-    site = ['https','http']
-    role = discord.utils.get(message.guild.roles, name = "링크")
-    if message.author.bot:
-        return None
-   
-
-    if message.content.startswith('!!설명'):
-        
-        embed = discord.Embed(title="클랜설명", description="클마:박기현#3939", color=0x62c1cc,timestamp=datetime.datetime.utcnow()) #Embed의 기본 틀(색상, 메인 제목, 설명)을 잡아줍니다   하단에 들어가는 조그마한 설명을 잡아줍니다   embed를 포함 한 채로 메시지를 전송합니다.
-        embed.set_footer(text="궁금증이 해결되셨나요?? 안되셨으면 클마한테 문의 ㄱ")
-        embed.add_field(name="부마", value="어진#1288", inline=True)
-        embed.add_field(name="매니저", value="Nxxħɍøn-_#9080", inline=True)
-        embed.add_field(name="매니저", value="Miasoul#0811", inline=True)
-        embed.add_field(name="기본사항", value="카배 클랜", inline=True)
-        await message.channel.send(embed=embed)
-    
-    
-    if message.content.startswith('!!사이트'):
-        await message.channel.send("없는뎅ㅎ")
-    
- 
+    print("ready")
+    DiscordComponents(client)
     
 
-    if message.content.startswith('!!프사'):
-        await message.channel.send(file=discord.File('프사.png'))
-        
-    if message.content.startswith('!!명령어'):
-        embed=discord.Embed(title='명령어 목록', description = "", color = 0xff0000, timestamp=datetime.datetime.utcnow())
-        embed.add_field(name="!!프사", value="프로필을 업로드합니다", inline=True)
-        embed.add_field(name="!!사이트", value="사이트를 보여줌니다", inline=True)
-        embed.add_field(name="!!내정보", value=message.author.name + "님의 이름, 서버이름, 디스코드가입일, 아이디를 보여줍니다", inline=True)
-        await message.channel.send(embed=embed)
+@client.command()
+async def 버튼(ctx):
+    await ctx.send("click button", components
+    = [Button(label = "CLICK me")])
+    interaction = await client.wait_for("button_click",
+    check = lambda i: i.component.label.startswith
+    ("CLICK"))
+    await interaction.respond(content = "ㄳㄳ")
 
-       
-    if message.content.startswith('!!help'):
-        embed=discord.Embed(title='명령어 목록', description = "", color = 0xff0000, timestamp=datetime.datetime.utcnow())
-        embed.add_field(name="!!프사", value="프로필을 업로드합니다", inline=True)
-        embed.add_field(name="!!사이트", value="사이트를 보여줍니다", inline=True)
-        embed.add_field(name="!!내정보", value=message.author.name + "님의 이름, 서버이름, 디스코드가입일, 아이디를 보여줍니다", inline=True)
-        await message.channel.send(embed=embed)
+@client.command()
+async def start(ctx):
+    link = await togec.create_link(ctx.author.voice.channel.id, 'youtube')
+    await ctx.send(f"{link}")
 
-        
- 
-    
-    if message.content.startswith('!!내정보'):
-        date = datetime.datetime.utcfromtimestamp(((int(message.author.id) >> 22) + 1420070400000) / 1000)
-        embed = discord.Embed(color=0x00ff0, timestamp=datetime.datetime.utcnow())
-        embed.add_field(name="이름", value=message.author.name, inline=True)
-        embed.add_field(name="서버닉네임", value=message.author.display_name, inline=True)
-        embed.add_field(name="디스코드가입일", value=str(date.year) + "년" + str(date.month) + "월" + str(date.day) + "일", inline=True)
-        embed.add_field(name="아이디", value=message.author.id, inline=True)
-        embed.set_thumbnail(url=message.author.avatar_url)
-        await message.channel.send(embed=embed)
-    
-    
-    
-    
-    
-  
-        
-
-        
-        
-   
-        
-        
-    if message.content.startswith('!!ytps'):
-        if message.channel.name == 'nlg유튭방':
-            embed=discord.Embed(title='NLG클랜 유튭비번, 아이디', description = message.author.name + "님이 명령어를쓰심", color = 0xff0000, timestamp=datetime.datetime.utcnow())
-            embed.add_field(name="아이디:", value="nlg102938@gmail.com", inline=True)
-            embed.add_field(name="비번:", value="nlgisgod!", inline=True)
-            await message.channel.send(embed=embed)
-            await message.delete()
-        else:
-            await message.channel.send("이 채널에선 실행이 불가능합니다.")
-            await message.delete()
-
-    for i in site:
-        if i in message.content:
-            if message.author.guild_permissions.manage_channels:
-                return
-            elif role in message.author.roles:
-                return
-            else:
-                await message.delete()           
-          
-           
-        
-            
-            
-            
-            
-   
-
-       
-    
-
-    
-        
-        
-        
-        
-        
-  
-        
-access_token = os.environ['BOT_TOKEN']
-client.run(access_token)
+client.run("ODgyNDg4MTUyMjQ4NDM0NzM4.YS8HIw.LJysjXI_dR_kE2xQjzWsSlQ_PCU")
