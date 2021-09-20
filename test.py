@@ -28,7 +28,13 @@ async def on_message(message):
       nick = message.content
       await message.author.edit(nick=nick)
 
-
+   if message.content == "체크":
+      if message.author.id == "356756775233650688":
+         await message.channel.send("살아있음")
+         time.sleep(5)
+         await message.channel.purge(limit=1)
+      else:
+         pass
 
 
 access_token = os.environ['BOT_TOKEN']
