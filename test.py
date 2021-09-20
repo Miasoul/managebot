@@ -20,7 +20,7 @@ client = commands.Bot(command_prefix=".")
 
 
 @client.command(pass_context=True)
-@has_permissions(manage_roles=True)
+@commands.has_permissions([ban_members=True, kick_members=True])
 async def 강변(ctx, member: discord.Member, nick):
     await member.edit(nick=nick)
 
