@@ -42,5 +42,15 @@ async def unmute(ctx, member: discord.Member):
      else:
         embed=discord.Embed(title="권한거부", description="너 권한 없는뎅??", color=0xff00f6)
         await ctx.send(embed=embed)
+
+@client.event
+async def on_message(message):
+   if message.channel.id == '873829277752242196':
+      nick = message.content
+      await message.author.edit(nick=nick)
+
+
+
+
 access_token = os.environ['BOT_TOKEN']
 client.run(access_token)
