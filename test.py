@@ -7,9 +7,8 @@ from discord.ext.commands.converter import clean_content
 from discord.ext.commands.core import bot_has_guild_permissions
 import discord.utils
 import os
-client = discord.Client()
 
-
+client = commands.Bot(command_prefix=".")
 
 @client.event
 async def on_message(message):
