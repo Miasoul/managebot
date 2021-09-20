@@ -20,7 +20,7 @@ client = commands.Bot(command_prefix=".")
 
 
 @client.command(pass_context=True)
-@commands.has_role(821709021073375233)
+
 async def 강변(ctx, member: discord.Member, nick):
     await member.edit(nick=nick)
 
