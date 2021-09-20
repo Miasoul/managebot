@@ -7,7 +7,7 @@ from discord.ext.commands.converter import clean_content
 from discord.ext.commands.core import bot_has_guild_permissions
 import discord.utils
 import os
-
+from discord.ext.commands import has_permissions
 client = commands.Bot(command_prefix=".")
 
 
@@ -20,6 +20,7 @@ client = commands.Bot(command_prefix=".")
 
 
 @client.command(pass_context=True)
+@has_permissions(manage_roles=True)
 async def 강변(ctx, member: discord.Member, nick):
     await member.edit(nick=nick)
 
