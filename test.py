@@ -8,7 +8,7 @@ from discord.ext.commands.core import bot_has_guild_permissions
 import discord.utils
 import os
 
-client = discord.Client()
+client = commands.Bot(command_prefix=".")
 
 
 
@@ -16,6 +16,12 @@ client = discord.Client()
 
 
 
+
+
+
+@client.command(pass_context=True)
+async def 강변(ctx, member: discord.Member, nick):
+    await member.edit(nick=nick)
 
 
 
@@ -27,14 +33,6 @@ async def on_message(message):
       
       nick = message.content
       await message.author.edit(nick=nick)
-
-   if message.content == "체크":
-      if message.author.id == "356756775233650688":
-         await message.channel.send("살아있음")
-         time.sleep(5)
-         await message.channel.purge(limit=1)
-      else:
-         pass
 
 
 access_token = os.environ['BOT_TOKEN']
