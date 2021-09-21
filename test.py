@@ -23,7 +23,18 @@ client = commands.Bot(command_prefix=".")
 
 async def 강변(ctx, member: discord.Member, nick):
     await member.edit(nick=nick)
+    
+  
+@client.command()
+async def random_members(ctx):
+    guild = ctx.guild # you can also use bot.get_guild(guild_id)
+    # role = guild.get_role('889691235713945672')
+    # members = role.members
+    # I'm using `random.sample` so I don't get any duplicates
+    random_members = random.choice(ctx.message.channel.guild.members)
 
+    await ctx.send(f'Members picked: `{random_members}`')
+    
 
 
 
